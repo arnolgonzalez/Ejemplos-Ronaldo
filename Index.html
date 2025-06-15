@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú de Ejemplos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .contenedor {
+      width: 200px;
+      padding: 10px;
+      border: 2px solid black;
+      margin: 20px 0;
+      background-color: white;
+    }
+
+    /* Display y Position */
+    .block { display: block; background: #f44336; color: white; padding: 5px; margin: 5px; }
+    .inline { display: inline; background: #2196F3; color: white; padding: 5px; }
+    .inline-block { display: inline-block; background: #4CAF50; width: 100px; height: 30px; text-align: center; color: white; line-height: 30px; }
+
+    .static, .relative, .absolute {
+      width: 100px;
+      height: 50px;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      margin: 10px 0;
+    }
+
+    .static { position: static; background: #9E9E9E; }
+    .relative { position: relative; top: 10px; left: 10px; background: #FF9800; }
+    .contenedor-position {
+      position: relative;
+      height: 100px;
+      background: #ddd;
+    }
+    .absolute { position: absolute; top: 10px; right: 10px; background: #3F51B5; }
+
+    /* Flexbox y Grid */
+    .caja {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      background: #e0e0e0;
+      margin: 20px 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 20px;
+      background: #f0f0f0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#ejemplo1">Ejemplo 1</a>
+    <a href="#ejemplo2">Ejemplo 2</a>
+    <a href="#ejemplo3">Ejemplo 3</a>
+  </nav>
+
+  <section id="ejemplo1">
+    <h2>Ejemplo 1: Box Model</h2>
+    <div class="contenedor">
+      <p>Este es un contenedor que demuestra cómo funciona el modelo de caja en CSS.</p>
+    </div>
+  </section>
+
+  <section id="ejemplo2">
+    <h2>Ejemplo 2: Display y Posicionamiento</h2>
+    <div class="block">Block</div>
+    <span class="inline">Inline</span>
+    <span class="inline-block">Inline-Block</span>
+
+    <div class="static">Static</div>
+    <div class="relative">Relative</div>
+    <div class="contenedor-position">
+      <div class="absolute">Absolute</div>
+    </div>
+  </section>
+
+  <section id="ejemplo3">
+    <h2>Ejemplo 3: Flexbox y Grid</h2>
+
+    <h3>Flexbox</h3>
+    <div class="flex-container">
+      <div class="caja">Caja 1</div>
+      <div class="caja">Caja 2</div>
+      <div class="caja">Caja 3</div>
+    </div>
+
+    <h3>Grid</h3>
+    <div class="grid-container">
+      <div class="caja">Columna 1 (1fr)</div>
+      <div class="caja">Columna 2 (2fr)</div>
+    </div>
+  </section>
+
+</body>
+</html>
