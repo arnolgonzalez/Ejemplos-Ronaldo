@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox y Grid</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .caja {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* FLEXBOX */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      background: #e0e0e0;
+    }
+
+    /* GRID */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 20px;
+      background: #f0f0f0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Flexbox</h2>
+  <div class="flex-container">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>Grid</h2>
+  <div class="grid-container">
+    <div class="caja">Columna 1 (1fr)</div>
+    <div class="caja">Columna 2 (2fr)</div>
+  </div>
+
+</body>
+</html>
