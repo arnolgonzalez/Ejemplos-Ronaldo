@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posicionamiento y Visualización</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .display-ejemplo div, .display-ejemplo span {
+      margin: 5px;
+      padding: 5px;
+      color: white;
+    }
+
+    .block { display: block; background: #f44336; }
+    .inline { display: inline; background: #2196F3; }
+    .inline-block { display: inline-block; background: #4CAF50; width: 100px; height: 30px; }
+
+    .pos-static {
+      position: static;
+      background: #9E9E9E;
+      width: 100px; height: 50px;
+      margin-top: 20px;
+      color: white; text-align: center; line-height: 50px;
+    }
+
+    .pos-relative {
+      position: relative;
+      top: 10px; left: 10px;
+      background: #FF9800;
+      width: 100px; height: 50px;
+      color: white; text-align: center; line-height: 50px;
+    }
+
+    .contenedor {
+      position: relative;
+      height: 100px;
+      background: #eee;
+      margin-top: 10px;
+    }
+
+    .pos-absolute {
+      position: absolute;
+      top: 10px; right: 10px;
+      background: #3F51B5;
+      width: 100px; height: 50px;
+      color: white; text-align: center; line-height: 50px;
+    }
+
+    .z1, .z2 {
+      position: absolute;
+      width: 80px; height: 80px;
+      text-align: center; line-height: 80px;
+      color: white;
+    }
+
+    .z1 {
+      background: rgba(255,0,0,0.7);
+      top: 0; left: 0;
+      z-index: 1;
+    }
+
+    .z2 {
+      background: rgba(0,0,255,0.7);
+      top: 20px; left: 20px;
+      z-index: 2;
+    }
+
+    .z-demo {
+      position: relative;
+      height: 100px;
+      margin-top: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Display</h2>
+  <div class="display-ejemplo">
+    <div class="block">Block</div>
+    <span class="inline">Inline</span>
+    <span class="inline-block">Inline-Block</span>
+  </div>
+
+  <h2>Position</h2>
+  <div class="pos-static">Static</div>
+  <div class="pos-relative">Relative</div>
+  <div class="contenedor">
+    <div class="pos-absolute">Absolute</div>
+  </div>
+
+  <h2>z-index</h2>
+  <div class="z-demo">
+    <div class="z1">z1</div>
+    <div class="z2">z2</div>
+  </div>
+
+</body>
+</html>
